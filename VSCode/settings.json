@@ -1,0 +1,21 @@
+{
+    "vim.easymotion": true,
+    "vim.leader": ",",
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<esc>"]
+        },
+],
+        "vim.normalModeKeyBindingsNonRecursive": [
+            {
+                "before": [";"],
+                "commands": [
+                    "workbench.action.showCommands",
+                ]
+            }
+        ],
+"bookmarks.saveBookmarksInProject": true,
+"editor.tabCompletion": "on"
+}
