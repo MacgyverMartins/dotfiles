@@ -1,21 +1,138 @@
 {
+    "editor.tabCompletion": "on",
+    "editor.formatOnSave": true,
+    "editor.showFoldingControls": "always",
+    "editor.folding": true,
+    "editor.foldingStrategy": "indentation",
     "vim.easymotion": true,
     "vim.leader": ",",
     "vim.useSystemClipboard": true,
+    "vim.foldfix": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j", "j"],
-            "after": ["<esc>"]
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<esc>"
+            ]
         },
-],
-        "vim.normalModeKeyBindingsNonRecursive": [
-            {
-                "before": [";"],
-                "commands": [
-                    "workbench.action.showCommands",
-                ]
-            }
-        ],
-"bookmarks.saveBookmarksInProject": true,
-"editor.tabCompletion": "on"
+        {
+            "before": [
+                "j",
+                "l"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        },
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "p",
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<leader>",
+                "m"
+            ],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "m"
+            ],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                "bookmarks.jumpToPrevious"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "commands": [
+                "bookmarks.jumpToNext"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "m"
+            ],
+            "commands": [
+                "editor.foldAll"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "n"
+            ],
+            "commands": [
+                "editor.unfoldAll"
+            ]
+        },
+    ],
+    "bookmarks.saveBookmarksInProject": true,
+    "workbench.settings.useSplitJSON": true,
+    "eslint.autoFixOnSave": true,
+    "editor.largeFileOptimizations": false,
 }
