@@ -6,13 +6,14 @@ export PATH=$(brew --prefix openvpn)/sbin:$PATH
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/moobie-mac/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="awesome-patched"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
+alias zshconfig="code ~/.zshrc"
+alias moobie="cd ~/projects/moobie"
 
 plugins=(git colored-man colorize pip python brew osx zsh-syntax-highlighting)
 
@@ -124,3 +127,6 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Widgets created later will work, but will not update the syntax highlighting.
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
