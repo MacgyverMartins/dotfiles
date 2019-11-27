@@ -1,0 +1,11 @@
+[user]
+	name = Macgyver
+	email = macgyver.martins@gmail.com
+[alias]
+	st = status -sb
+	cm = commit
+	hist = log --all --graph --decorate --oneline --abbrev-commit
+	tags = tag -l
+	ch = checkout
+	branches = branch -a
+	lg = log
