@@ -3,6 +3,10 @@ DEFAULT_USER=`whoami`
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
+export NPM_TOKEN="3fb11e52-4175-4738-82bd-299107fe81bf"
+
+export PATH=$HOME/flutter/bin:$PATH
+
 
 
 # Path to your oh-my-zsh installation.
@@ -12,8 +16,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_MODE="awesome-patched"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# POWERLEVEL9K_MODE="awesome-patched"
+ZSH_THEME="robbyrussell"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -78,8 +84,16 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export SPOTIPY_CLIENT_ID='3d2ef076d75e46d192e3f1098a1719d4'
+export SPOTIPY_CLIENT_SECRET='072ba0e96e814101a083c4c3f8dddc35'
+export SPOTIPY_REDIRECT_URI='https://dj-teste.herokuapp.com/'
+export YOUTUBE_DEV_KEY='AIzaSyCuek-KVP9m9owJxmWiu-mR5-1qJJ32aWI'
+
+export NEXT_PUBLIC_GRAPHQL_URI='http://localhost:8080/graphql'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -104,7 +118,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
 alias zshconfig="code ~/.zshrc"
-alias moobie="cd ~/projects/moobie"
+alias sk="cd ~/projects/skore"
+alias gfl="git flow"
 
 plugins=(git colored-man colorize pip python brew osx zsh-syntax-highlighting)
 
@@ -126,7 +141,28 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # It must be sourced after all custom widgets have been created (i.e., after all zle -N calls and after running compinit). 
 # Widgets created later will work, but will not update the syntax highlighting.
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+# Widgets that accept the suggestion as far as the cursor moves
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(
+    forward-word
+    vi-forward-word
+    vi-forward-word-end
+    vi-forward-blank-word
+    vi-forward-blank-word-end
+)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=trueexport PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/macgyvermartins/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/macgyvermartins/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/macgyvermartins/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/macgyvermartins/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/macgyvermartins/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
