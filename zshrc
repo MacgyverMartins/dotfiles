@@ -3,7 +3,6 @@ DEFAULT_USER=`whoami`
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
-export NPM_TOKEN="3fb11e52-4175-4738-82bd-299107fe81bf"
 
 export PATH=$HOME/flutter/bin:$PATH
 
